@@ -7,16 +7,10 @@
 
     <Bestseller />
 
-    <div class="row">
-        <div class="col-12 text-center">
-            sezione componente "sconti" x2
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-12 text-center">
-            sezione con componente "modello"x5 voce new arrivals
-        </div>
-    </div>
+    <Promo />
+    
+    <Newarrivals />
+
     <div class="row">
         <div class="col-12 text-center">
             sezione con componente "citazioni"
@@ -40,12 +34,16 @@
 import Featuredproducts from '../sections/Featured-Products.vue'
 import Collection from '../sections/Collection.vue'
 import Bestseller from '../sections/Bestseller.vue'
+import Promo from '../sections/Promo.vue'
+import Newarrivals from '../sections/Newarrivals.vue'
 
 export default {
   components: { 
     Featuredproducts,
     Collection,
     Bestseller,
+    Promo,
+    Newarrivals,
     
     },
     name:"Main"

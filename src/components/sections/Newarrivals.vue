@@ -1,8 +1,8 @@
 <template>
 
 <div class="ms_container text-center">
-    <h1>Best Seller</h1>
-    <h6> Must have products from our top sellers</h6>
+    <h1>New arrivals</h1>
+    <h6> Brand new products from top designer</h6>
     <div class="ms_model-carousel-container">
         <div class="ms_carousel-buttons rx">
             <i class="fas fa-chevron-right"></i>
