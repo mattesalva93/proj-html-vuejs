@@ -5,11 +5,8 @@
 
     <Collection />
 
-    <div class="row">
-        <div class="col-12 text-center">
-            sezione con componente "modello"x5 voce best seller
-        </div>
-    </div>
+    <Bestseller />
+
     <div class="row">
         <div class="col-12 text-center">
             sezione componente "sconti" x2
@@ -41,12 +38,14 @@
 <script>
 
 import Featuredproducts from '../sections/Featured-Products.vue'
-import Collection from '../sub-components/Collection.vue'
+import Collection from '../sections/Collection.vue'
+import Bestseller from '../sections/Bestseller.vue'
 
 export default {
   components: { 
     Featuredproducts,
     Collection,
+    Bestseller,
     
     },
     name:"Main"
