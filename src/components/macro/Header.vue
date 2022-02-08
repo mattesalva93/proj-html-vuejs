@@ -1,8 +1,11 @@
 <template>
-<div class="container">
+<div class="container-fluid">
+    <div class="row">
+        <Headertop />
+    </div>
     <div class="row">
         <div class="col-12 text-center">
-            Header e nav
+            nav
         </div>
     </div>
     <div class="row">
@@ -14,12 +17,16 @@
 </template>
 
 <script>
+import Headertop from '../sections/Header-top.vue'
 export default {
-    name:"Header"
+    name:"Header",
+    components: {
+        Headertop
+
+    }
 }
 </script>
 
 <style lang="scss" scoped>
 @import '../../assets/style/globals.scss';
-
 </style>
