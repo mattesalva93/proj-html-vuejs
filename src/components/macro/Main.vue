@@ -1,15 +1,10 @@
 <template>
-<div class="container">
-    <div class="row">
-        <div class="col-12 text-center mt-5">
-            sezione con componente "modello"x4 voce featured products
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-12 text-center">
-            sezione con componente "collezioni" 
-        </div>
-    </div>
+<div>
+
+    <Featuredproducts />
+
+    <Collection />
+
     <div class="row">
         <div class="col-12 text-center">
             sezione con componente "modello"x5 voce best seller
@@ -44,7 +39,16 @@
 </template>
 
 <script>
+
+import Featuredproducts from '../sections/Featured-Products.vue'
+import Collection from '../sub-components/Collection.vue'
+
 export default {
+  components: { 
+    Featuredproducts,
+    Collection,
+    
+    },
     name:"Main"
 }
 </script>
