@@ -1,5 +1,5 @@
 <template>
-    <div class="col d-flex justify-content-around align-items-center border-bottom">
+    <div class="col d-flex justify-content-between align-items-center border-bottom">
         <div class="social-icons">
             <i class="fab fa-facebook-f"></i>
             <i class="fab fa-twitter"></i>            
@@ -41,7 +41,7 @@ export default {
         height: 50px;
         display: flex;
         align-items: center;
-        width: 25%;
+        width: 40%;
         .shopping-option{
             width: 27.5%;
             text-align: center;
