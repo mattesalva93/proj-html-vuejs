@@ -1,5 +1,5 @@
 <template>
-    <div class="col d-flex justify-content-between align-items-center border-bottom">
+    <div class="d-flex justify-content-between align-items-center ms_container">
         <div class="social-icons">
             <i class="fab fa-facebook-f"></i>
             <i class="fab fa-twitter"></i>            
