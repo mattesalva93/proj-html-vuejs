@@ -36,10 +36,10 @@ export default {
             font-size: 0.8rem;
         }
         .lx{
-            left: 0;
+            left: 1%;
         }
         .rx{
-            right: 0;
+            right: 1%;
         }
     }
 </style>
