@@ -1,52 +1,30 @@
 <template>
-
-<div class="ms_model-container">
-    <div class="ms_model-box">
-        <img src="../../assets/img/black_elegant_leather_jacket-200x260.jpg" alt="">
-        <h6>Black Leather Jacket</h6>
-        <span>Men,Jackets,Jeans</span> <br>
-        <span>260€</span>
+     <div class="ms_model-box">
+        <img :src="capo.src" alt="">
+        <h6>{{capo.modello}}</h6>
+        <span>{{capo.tipologia}}</span> <br>
+        <span v-if="capo.sconto == true">
+            <s>{{capo.prezzo}}</s>
+            {{capo.prezzoscontato}}
+        </span>
+        <span v-else> {{capo.prezzo}}</span>
     </div>
-    <div class="ms_model-box">
-        <img src="../../assets/img/black_elegant_leather_jacket-200x260.jpg" alt="">
-        <h6>Black Leather Jacket</h6>
-        <span>Men,Jackets,Jeans</span> <br>
-        <span>260€</span>
-    </div>
-    <div class="ms_model-box">
-        <img src="../../assets/img/black_elegant_leather_jacket-200x260.jpg" alt="">
-        <h6>Black Leather Jacket</h6>
-        <span>Men,Jackets,Jeans</span> <br>
-        <span>260€</span>
-    </div>
-    <div class="ms_model-box">
-        <img src="../../assets/img/black_elegant_leather_jacket-200x260.jpg" alt="">
-        <h6>Black Leather Jacket</h6>
-        <span>Men,Jackets,Jeans</span> <br>
-        <span>260€</span>
-    </div>
-
-</div>
-
 </template>
 
 
 <script>
 export default {
-    name:"Model"
+    name:"Model",
+    props:{
+        'capo': Object
+    }
 }
 </script>
 
 <style lang="scss" scoped>
 @import '../../assets/style/globals.scss';
-
-    .ms_model-container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .ms_model-box{
-            margin: 0 10px;
-        }
-
+    s{
+        font-size: 0.8rem;
     }
+    
 </style>

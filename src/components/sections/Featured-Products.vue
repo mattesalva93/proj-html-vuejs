@@ -11,18 +11,30 @@
     <div class="ms_products-target">
         Accessories
     </div>
-    <Model />
+    <div 
+    class="ms_models-container ms_products-target-active">
+        <Model 
+        v-for="(element, index) in modelli" 
+        :key="index"
+        :capo="element" />
+    </div>
 </div>
 </template>
 
 <script>
 import Model from '../sub-components/Model.vue'
+import products from '../data/avada.js';
+
 export default {
     name:"Featuredproducts",
     components:{
         Model
+    },
+    data(){
+        return{
+            modelli: products,
 
-   
+        }
     }
 }
 </script>
@@ -34,6 +46,14 @@ export default {
         display: inline-block;
         padding: 10px 45px;
         border: 1px solid lightgrey;
-
+        background-color: lightblue;
+    }
+    .ms_products-target-active{
+        background-color: white;
+    }
+    .ms_models-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 </style>
