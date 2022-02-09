@@ -1,31 +1,22 @@
 <template>
-    <div class="ms_blog-post-container d-flex">
-        <div class="ms_article-box">
-            <img src="../../assets/img/post_img_10-320x202.jpg" alt="">
-            <h6>Lorem ipsum dolor sit amet</h6>
-            <span>September 9 2015</span> <span>| 0 comments</span>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, corrupti, quaerat eligendi modi</p>
-        </div>
-        <div class="ms_article-box">
-            <img src="../../assets/img/post_img_10-320x202.jpg" alt="">
-            <h6>Lorem ipsum dolor sit amet</h6>
-            <span>September 9 2015</span> <span>| 0 comments</span>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, corrupti, quaerat eligendi modi</p>
-        </div>
-        <div class="ms_article-box">
-            <img src="../../assets/img/post_img_10-320x202.jpg" alt="">
-            <h6>Lorem ipsum dolor sit amet</h6>
-            <span>September 9 2015</span> <span>| 0 comments</span>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, corrupti, quaerat eligendi modi</p>
-        </div>
-        
+    
+    <div class="ms_article-box">
+        <img :src="articolo.src" alt="">
+        <h6>{{articolo.title}}</h6>
+        <span>{{articolo.date}}</span> <span>| {{articolo.comments}}</span>
+        <p>{{articolo.text}}</p>
     </div>
+        
+    
 </template>
 
 <script>
 
 export default {
     name:"Ourblog",
+    props:{
+        'articolo': Object
+    }
 
 }
 </script>
