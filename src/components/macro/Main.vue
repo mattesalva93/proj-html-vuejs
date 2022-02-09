@@ -1,5 +1,5 @@
 <template>
-<div>
+<main>
     <Featuredproducts />
 
     <Collection />
@@ -14,12 +14,8 @@
 
     <Our-blog />
 
-    <div class="row">
-        <div class="col-12 text-center">
-            sezione con componente "lista prodotti" voce best seller
-        </div>
-    </div>
-</div>
+    <Products-list />
+</main>
 </template>
 
 <script>
@@ -31,6 +27,7 @@ import Promo from '../sections/Promo.vue'
 import Newarrivals from '../sections/Newarrivals.vue'
 import Quotes from '../sections/Quotes.vue'
 import OurBlog from '../sections/Our-blog.vue'
+import ProductsList from '../sections/Products-list.vue'
 
 export default {
   components: { 
@@ -41,6 +38,7 @@ export default {
     Newarrivals,
     Quotes,
     OurBlog,
+    ProductsList
     
     },
     name:"Main"
