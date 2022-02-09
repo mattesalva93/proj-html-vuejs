@@ -2,22 +2,46 @@
 <div class="ms_container text-center">
     <h2>Featured Products </h2>
     <h6>Must have products from our top sellers</h6>
-    <div class="ms_products-target">
+    <div class="ms_products-target" 
+    @click="elencoAttivo = 'men'"
+    :class="{'ms_products-target-active': elencoAttivo == 'men'}">
         Men
     </div>
-    <div class="ms_products-target">
+    <div class="ms_products-target" 
+    @click="elencoAttivo = 'women'"
+    :class="{'ms_products-target-active': elencoAttivo == 'women'}">
         Women
     </div>
-    <div class="ms_products-target">
+    <div class="ms_products-target" 
+    @click="elencoAttivo = 'accessories'"
+    :class="{'ms_products-target-active': elencoAttivo == 'accessories'}">
         Accessories
     </div>
-    <div 
-    class="ms_models-container ms_products-target-active">
+    <div
+    v-if="elencoAttivo == 'men'"  
+    class="ms_models-container">
         <Model 
-        v-for="(element, index) in modelli" 
+        v-for="(element, index) in modelliUomini" 
         :key="index"
         :capo="element" />
     </div>
+    <div
+    v-if="elencoAttivo == 'women'"  
+    class="ms_models-container">
+        <Model 
+        v-for="(element, index) in modelliDonne" 
+        :key="index"
+        :capo="element" />
+    </div>
+    <div
+    v-if="elencoAttivo == 'accessories'"  
+    class="ms_models-container">
+        <Model 
+        v-for="(element, index) in modelliAccessori" 
+        :key="index"
+        :capo="element" />
+    </div>
+    
 </div>
 </template>
 
@@ -33,7 +57,30 @@ export default {
     data(){
         return{
             modelli: products,
+            modelliUomini: [],
+            modelliDonne: [],
+            modelliAccessori: [],
+            elencoAttivo: "men"
+        }
+    },
+    created (){
+        this.getAccessori();
+        this.getModelliUomini();
+        this.getModelliDonne();
 
+    },
+    methods: {
+        getModelliUomini (){
+            this.modelliUomini = this.modelli.filter(element => element.target == 'men');
+            console.log(this.modelliUomini)
+        },
+        getModelliDonne (){
+            this.modelliDonne = this.modelli.filter(element => element.target == "women");
+            console.log(this.modelliDonne)
+        },
+        getAccessori (){
+            this.modelliAccessori = this.modelli.filter(element => element.target == "accessories");
+            console.log(this.modelliAccessori)
         }
     }
 }

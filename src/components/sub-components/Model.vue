@@ -1,5 +1,5 @@
 <template>
-     <div class="ms_model-box">
+    <div class="ms_model-box">
         <img :src="capo.src" alt="">
         <h6>{{capo.modello}}</h6>
         <span>{{capo.tipologia}}</span> <br>
