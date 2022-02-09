@@ -4,8 +4,7 @@
         <div class="ms_carousel-buttons rx">
             <i class="fas fa-chevron-right"></i>
         </div>
-        <img src="../../assets/img/black_elegant_leather_jacket-400x520.jpg" alt=""
-        v-for="(element, index) in 5" :key="index"/>
+        <img :src="modello.src" alt=""/>
         <div class="ms_carousel-buttons lx">
             <i class="fas fa-angle-left"></i>
         </div>
@@ -16,7 +15,11 @@
 
 <script>
 export default {
-    name:"Carousel"
+    name:"Carousel",
+    props: {
+        'modello': Object,
+    }
+    
 }
 </script>
 
