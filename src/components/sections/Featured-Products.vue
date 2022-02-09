@@ -71,14 +71,17 @@ export default {
     },
     methods: {
         getModelliUomini (){
-            this.modelliUomini = this.modelli.filter(element => element.target == 'men');
+            this.modelliFeatured = this.modelli.filter(element => element.featured);
+            this.modelliUomini = this.modelliFeatured.filter(element => element.target == 'men');
             console.log(this.modelliUomini)
         },
         getModelliDonne (){
+            this.modelliFeatured = this.modelli.filter(element => element.featured);
             this.modelliDonne = this.modelli.filter(element => element.target == "women");
             console.log(this.modelliDonne)
         },
         getAccessori (){
+            this.modelliFeatured = this.modelli.filter(element => element.featured);
             this.modelliAccessori = this.modelli.filter(element => element.target == "accessories");
             console.log(this.modelliAccessori)
         }
