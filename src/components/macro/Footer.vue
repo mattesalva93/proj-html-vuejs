@@ -73,7 +73,7 @@
 </template>
 
 <script>
-import FooterTop from '../sub-components/Footer-top.vue'
+import FooterTop from '../sections/Footer-top.vue'
 import ProductsListCategory from '../sub-components/Products-list-category.vue'
 export default {
     components: {

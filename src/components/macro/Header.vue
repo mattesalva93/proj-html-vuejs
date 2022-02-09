@@ -11,7 +11,8 @@
                 <Nav 
                 v-for="(element, index) in vociNav" 
                 :key="index" 
-                :vocenav=element />
+                :vocenav=element 
+                />
                 <div>
                     <button class="btn btn-primary rounded-pill" type="submit">SHOP NOW!</button>
                     <i class="fas fa-search"></i>
@@ -36,7 +37,32 @@ export default {
     },
     data(){
         return{
-            vociNav: ['Home', 'Shop', 'Products', 'Categories', 'News', 'Elements']
+            vociNav: [
+            {
+                text: "Home",
+                current: true,
+            },
+            {
+                text: "Shop",
+                current: false,
+            },
+            {
+                text: "Products",
+                current: false,
+            },
+            {
+                text: "Categories",
+                current: false,
+            },
+            {
+                text: "News",
+                current: false,
+            },
+            {
+                text: "Elements",
+                current: false,
+            },
+        ]
         }
     }
 }
@@ -48,5 +74,12 @@ export default {
 .ms_borders{
     border-bottom: 1px solid lightgrey;
     border-top: 2px solid blue;
+}
+.ms_nav-active{
+    color: lightblue;
+    border-top: 2px solid lightblue;
+}
+button{
+    margin-right: 50px;
 }
 </style>
