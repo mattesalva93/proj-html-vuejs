@@ -4,9 +4,15 @@
 
     <div class="ms_footer-main">
         <div class="ms_container d-flex">
-            <div class="ms_footer-section py-5">
-                <img src="../../assets/img/classic_shop_logo1x.png" alt="">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita ad impedit distinctio ipsam officia ex amet quas inventore. Tempora earum labore at dicta! Dolorum optio necessitatibus a atque assumenda veritatis.</p>
+            <div class="ms_footer-section py-5 d-flex flex-column justify-content-between">
+                <img src="../../assets/img/classic_shop_logo_footer.png" alt="">
+                <div>
+                    <p>Lorem ipsum dolor sit</p>
+                    <p>Lorem ipsum dolor sit</p>
+                    <p>Lorem ipsum dolor sit</p>
+                    <p>Lorem ipsum dolor sit</p>
+                    <p>Lorem ipsum dolor sit</p>
+                </div>
                 <div class="social-icons">
                     <i class="fab fa-facebook-f"></i>
                     <i class="fab fa-twitter"></i>            
@@ -14,24 +20,26 @@
                     <i class="fab fa-youtube"></i>
                 </div>
             </div>
-            <div class="ms_footer-section py-5">
-                <h4>Top rated</h4>
+            <div class="ms_footer-section d-flex flex-column justify-content-between py-5">
+                <h6>TOP RATED PRODUCTS</h6>
                 <Products-list-category 
                 v-for="(element, index) in modelliTopRated" 
                 :key="index"
                 :prodotto="element"/>  
             </div>
-            <div class="ms_footer-section ms_footer-blog-links py-5">
-                <h4>recent posts</h4>
-                <p><i class="fas fa-angle-right"></i> Lorem ipsum dolor sit amet</p>
-                <p><i class="fas fa-angle-right"></i> Lorem ipsum dolor sit amet</p>
-                <p><i class="fas fa-angle-right"></i> Lorem ipsum dolor sit amet</p>
-                <p><i class="fas fa-angle-right"></i> Lorem ipsum dolor sit amet</p>
-                <p><i class="fas fa-angle-right"></i> Lorem ipsum dolor sit amet</p>
-                <p><i class="fas fa-angle-right"></i> Lorem ipsum dolor sit amet</p>
+            <div class="ms_footer-section ms_footer-blog-links py-5 d-flex flex-column justify-content-between">
+                <h6>RECENT POSTS</h6>
+                <div>
+                    <p><i class="fas fa-angle-right"></i> Lorem ipsum dolor sit amet</p>
+                    <p><i class="fas fa-angle-right"></i> Lorem ipsum dolor sit amet</p>
+                    <p><i class="fas fa-angle-right"></i> Lorem ipsum dolor sit amet</p>
+                    <p><i class="fas fa-angle-right"></i> Lorem ipsum dolor sit amet</p>
+                    <p><i class="fas fa-angle-right"></i> Lorem ipsum dolor sit amet</p>
+                    <p><i class="fas fa-angle-right"></i> Lorem ipsum dolor sit amet</p>
+                </div>
             </div>
             <div class="ms_footer-section py-5">
-                <h4>Tags</h4>
+                <h6>TAGS</h6>
                 <div v-for="element in arrayTags" :key="element" class="ms_footer-tags">
                     {{element}}
                 </div>
@@ -41,6 +49,13 @@
 
     <div class="ms_footer-bottom text-center">
         <span> &#169; Copyright 2012-2020 | Avada Theme by Theme Fusion | All Rights Reseverved | Powered by WordPress</span>
+        <div>
+            <i class="fa-brands fa-cc-visa"></i>
+            <i class="fa-brands fa-cc-paypal"></i>
+            <i class="fa-brands fa-cc-mastercard"></i>
+            <i class="fa-brands fa-cc-discover"></i>
+            <i class="fa-brands fa-cc-amazon-pay"></i>
+        </div>
     </div>
 </footer>
 </template>
@@ -79,13 +94,21 @@ export default {
 @import '../../assets/style/globals.scss';
 
     .ms_footer-main{
-        background-color: lightgreen;
+        background-color: $neroavada;
+        color: white;
         .ms_footer-section{
             width: 22%;
             margin: 0 auto;
         }
         .ms_footer-section:first-child{
             margin-left: 0;
+            img{
+                width: 50%;
+            }
+            p{
+                width: 60%;
+                margin: 0;
+            }
         }
         .ms_footer-section:last-child{
             margin-right: 0;
@@ -98,12 +121,12 @@ export default {
         }
         .ms_footer-blog-links{
             p{
-                border-bottom: 1px solid lightgrey;
+                border-bottom: 1px solid $grigioavada;
                 padding-bottom: 1rem;
             }
         }
         .ms_footer-tags{
-            border: 1px solid lightgrey;
+            border: 1px solid $grigioavada;
             display: inline-block;
             padding: 8px;
             margin-right: 2px;
@@ -112,6 +135,10 @@ export default {
     .ms_footer-bottom{
         padding-top: 25px;
         color: white;
-        background-color: black;
+        background-color: #202020;
+        svg{
+            font-size: 2.5rem;
+            margin: 10px;
+        }
     }
 </style>
