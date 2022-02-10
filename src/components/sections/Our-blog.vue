@@ -1,7 +1,7 @@
 <template>
 <div class="ms_container-our-blog">
     <div class="ms_container text-center">
-        <h1>From Our Blog</h1>
+        <h2>From Our Blog</h2>
         <h6> the latest classic shop news</h6>
         <div class="ms_blog-post-container d-flex">    
             <Blog-article 
@@ -68,5 +68,24 @@ export default {
         text-transform: capitalize;
         color: $grigioavada;
     }
+    h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:after{
+        content: '';
+        flex: 1;
+        margin-left: 1rem;
+        height: 1px;
+        background-color: $bordiavada;
+    }
+    &:before{
+        content: '';
+        flex: 1;
+        margin-right: 1rem;
+        height: 1px;
+        background-color: $bordiavada;
+    }
+  }
 }
 </style>

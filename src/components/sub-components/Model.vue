@@ -33,6 +33,7 @@ export default {
             h6{
                 margin: 0;
             }
+            
             span:nth-of-type(1){
                 color: $grigioavada;
                 font-size: 0.9rem;

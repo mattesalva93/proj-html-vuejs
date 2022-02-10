@@ -1,6 +1,8 @@
 <template>
 <div class="ms_carousel-container text-center">
-    <h1>New arrivals</h1>
+  <div class="ms_container">
+    <h2>New arrivals</h2>
+  </div>
     <h6> Brand new products from top designer</h6>
     <div @click="scrollaDestra" class="ms_carousel-buttons rx">
         <i class="fas fa-chevron-right"></i>
@@ -89,6 +91,25 @@ export default {
   .rx{
       right: 1%;
   }
+  }
+h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:after{
+        content: '';
+        flex: 1;
+        margin-left: 1rem;
+        height: 1px;
+        background-color: $bordiavada;
+    }
+    &:before{
+        content: '';
+        flex: 1;
+        margin-right: 1rem;
+        height: 1px;
+        background-color: $bordiavada;
+    }
   }
 
 </style>

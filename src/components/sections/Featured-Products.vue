@@ -97,7 +97,10 @@ export default {
         padding: 10px 45px;
         border: 1px solid $bordiavada;
         background-color: #f5f5f5;
-        
+        &:hover{
+            background-color: white ;
+            cursor: pointer;
+        }
     }
     .ms_products-target-active{
         background-color: white;
@@ -113,6 +116,25 @@ export default {
         text-align: center;
         h6{
             color: $grigioavada;
+        }
+    }
+    h2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:after{
+            content: '';
+            flex: 1;
+            margin-left: 1rem;
+            height: 1px;
+            background-color: $bordiavada;
+        }
+        &:before{
+            content: '';
+            flex: 1;
+            margin-right: 1rem;
+            height: 1px;
+            background-color: $bordiavada;
         }
     }
     
