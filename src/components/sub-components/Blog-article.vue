@@ -27,6 +27,18 @@ export default {
             height: 65%;
             width: 100%;
         }
+        h6{
+            margin-bottom: 0;
+            margin-top: 0.5rem;
+        }
+        span{
+            color: $grigioavada;
+            font-size: 0.9rem;
+        }
+        p{
+            margin: 1.5rem 0;
+            color: $grigioavada;
+        }
 
     }
     .ms_article-box:nth-of-type(2){

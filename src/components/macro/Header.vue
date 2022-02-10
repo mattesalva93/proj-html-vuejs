@@ -14,7 +14,7 @@
                 :vocenav=element 
                 />
                 <div>
-                    <button class="btn btn-primary rounded-pill" type="submit">SHOP NOW!</button>
+                    <button class="rounded-pill" type="submit">SHOP NOW!</button>
                     <i class="fas fa-search"></i>
                 </div>
             </div>
@@ -72,14 +72,18 @@ export default {
 @import '../../assets/style/globals.scss';
 
 .ms_borders{
-    border-bottom: 1px solid lightgrey;
-    border-top: 2px solid blue;
+    border-bottom: 1px solid #f2f3f3;
+    border-top: 3px solid $bluavada;
 }
 .ms_nav-active{
-    color: lightblue;
-    border-top: 2px solid lightblue;
+    color: $bluavada;
+    border-top: 3px solid $bluavada;
 }
 button{
     margin-right: 50px;
+    color: white;
+    background-color: $bluavada;
+    border: none;
+    padding: 7px 25px;
 }
 </style>

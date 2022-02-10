@@ -1,13 +1,15 @@
 <template>
     <div class="ms_model-box">
         <img :src="capo.src" alt="">
-        <h6>{{capo.modello}}</h6>
-        <span>{{capo.tipologia}}</span> <br>
-        <span v-if="capo.sconto == true">
-            <s>{{capo.prezzo}}</s>
-            {{capo.prezzoscontato}}
-        </span>
-        <span v-else> {{capo.prezzo}}</span>
+            <div class="ms_model-text">
+                <h6>{{capo.modello}}</h6>
+                <span>{{capo.tipologia}}</span> <br>
+                <p v-if="capo.sconto == true">
+                    <s>{{capo.prezzo}}</s>
+                    {{capo.prezzoscontato}}
+                </p>
+                <p v-else> {{capo.prezzo}}</p>
+            </div>
     </div>
 </template>
 
@@ -23,8 +25,30 @@ export default {
 
 <style lang="scss" scoped>
 @import '../../assets/style/globals.scss';
+
+    .ms_model-box{
+        width: 25%;
+        .ms_model-text{
+            text-align: left;
+            h6{
+                margin: 0;
+            }
+            span:nth-of-type(1){
+                color: $grigioavada;
+                font-size: 0.9rem;
+            }
+            p:last-child{
+                margin-top: 0.5rem;
+                margin-bottom: 0;
+                color: $bluavada;
+            }
+        }
+
+    }
+
     s{
         font-size: 0.8rem;
     }
+    
     
 </style>

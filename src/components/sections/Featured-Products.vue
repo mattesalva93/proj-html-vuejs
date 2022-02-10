@@ -1,5 +1,5 @@
 <template>
-<div class="ms_container text-center">
+<div class="ms_container ms_margin">
     <h2>Featured Products </h2>
     <h6>Must have products from our top sellers</h6>
     <div class="ms_products-target" 
@@ -95,15 +95,25 @@ export default {
     .ms_products-target{
         display: inline-block;
         padding: 10px 45px;
-        border: 1px solid lightgrey;
-        background-color: lightblue;
+        border: 1px solid $bordiavada;
+        background-color: #f5f5f5;
+        
     }
     .ms_products-target-active{
         background-color: white;
+        margin: 50px 0;
     }
     .ms_models-container{
         display: flex;
         justify-content: center;
         align-items: center;
     }
+    .ms_margin{
+        padding: 100px 0;
+        text-align: center;
+        h6{
+            color: $grigioavada;
+        }
+    }
+    
 </style>

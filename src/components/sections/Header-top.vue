@@ -55,14 +55,14 @@ export default {
             }
         }
         .shopping-option:nth-child(2){
-            border-left: 1px solid grey;
-            border-right: 1px solid grey;
+            border-left: 1px solid $bordiavada;
+            border-right: 1px solid $bordiavada;
 
         }
         .shopping-option:last-child{
             width: 45%;
             height: 100%;
-            background-color: lightgray;
+            background-color: $bottonebiancoavada;
         }
     }
 </style>

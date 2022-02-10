@@ -2,7 +2,7 @@
 
 <div class="ms_carousel-container ms_container text-center">
     <h1>Best Sellers</h1>
-    <h6> Brand new products from top designer</h6>
+    <h6> Must have products from out top sellers</h6>
     <div @click="scrollaDestra" class="ms_carousel-buttons rx">
         <i class="fas fa-chevron-right"></i>
     </div>
@@ -67,14 +67,18 @@ export default {
       }
       }
     }
-
+  h6{
+    margin-bottom: 35px;
+    color: $grigioavada;
+  }
   .ms_carousel-container{
     position: relative;
+    padding: 100px 0;
     .ms_carousel-buttons{
       position: absolute;
       top: 50%;
-      padding: 10px 6px;
-      background-color: lightgrey;
+      padding: 20px 10px;
+      background-color: $grigioavada;
       color: white;
       font-size: 0.8rem;
   }

@@ -1,6 +1,7 @@
 <template>
+<div class="ms_container-our-blog">
     <div class="ms_container text-center">
-        <h1>From our blog</h1>
+        <h1>From Our Blog</h1>
         <h6> the latest classic shop news</h6>
         <div class="ms_blog-post-container d-flex">    
             <Blog-article 
@@ -10,6 +11,7 @@
             />
         </div>
     </div>
+</div>
 </template>
 
 <script>
@@ -57,4 +59,14 @@ export default {
 <style lang="scss" scoped>
 @import '../../assets/style/globals.scss';
 
+.ms_container-our-blog{
+    margin: 100px 0;
+    padding-bottom: 50px;
+    border-bottom: 1px solid $bordiavada;
+    h6{
+        padding-bottom: 40px;
+        text-transform: capitalize;
+        color: $grigioavada;
+    }
+}
 </style>

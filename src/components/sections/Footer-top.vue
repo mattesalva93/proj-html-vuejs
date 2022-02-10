@@ -2,8 +2,10 @@
     <div class="ms_footer-top">
         <div class="ms_footer-logos text-center">
             <div class="ms_container">
-                <h5>Brand Logos</h5>
-                <img v-for="(element, index) in arrayLoghi" :key="index" :src="element.src" alt="">           
+                <h5 class="my-4">BRAND LOGOS</h5>
+                <div class="d-flex justify-content-between">
+                    <img v-for="(element, index) in arrayLoghi" :key="index" :src="element.src" alt="">
+                </div>           
             </div>
         </div>
         <div class="ms_newsletter">
@@ -54,11 +56,23 @@ export default {
 @import '../../assets/style/globals.scss';
     .ms_footer-logos{
         padding: 50px 0;
-        background-color: lightgray;
+        background-color: $bottonebiancoavada;
     }
     .ms_newsletter{
-        background-color: lightblue;
-        padding: 80px 0;
+        background-color: $grigioscuroavada;
+        padding: 140px 0;
+        color: white;
+        svg{
+            color: $grigioavada;
+            background-color: $neroavada;
+            font-size: 2.5rem;
+            padding: 7px;
+            border-radius: 50%;
+
+        }
+    }
+    h5{
+        color: #8f8f8f;
         
     }
 </style>

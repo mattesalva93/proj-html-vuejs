@@ -3,24 +3,24 @@
     <div class="ms_container">
         <div class="ms_sale-box">
             <div class="ms_sale-text">
-                <h3>
+                <h1>
                     70% Off
-                </h3>
+                </h1>
                  <p>
                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui exercitationem nisi ea corrupti sapiente?
                 </p>
-                <button class="btn btn-primary rounded-pill" type="submit">View More</button>
+                <button type="submit"><b>VIEW MORE</b></button>
             </div>
         </div>
         <div class="ms_sale-box">
             <div class="ms_sale-text">
-                <h3>
+                <h1>
                     Free Shipping
-                </h3>
+                </h1>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui exercitationem nisi ea corrupti sapiente?
                 </p>
-                <button class="btn btn-primary rounded-pill" type="submit">View More</button>
+                <button type="submit"><b>VIEW MORE</b></button>
             </div>
         </div>
     </div>
@@ -57,9 +57,19 @@ export default {
                 position: relative;
                 .ms_sale-text{
                     position: absolute;
-                    max-width: 60%;
                     top: 30%;
                     left: 10%;
+                    p{
+                        margin: 1.5rem 0;
+                        max-width: 55%;
+                    }
+                    button{
+                        border: 2px solid white;
+                        padding: 12px 40px;
+                        background: rgba(255,255,255, 0.2);
+                        color: white;
+                        border-radius: 30px;
+                    }
                 }
             }
         .ms_sale-box:last-child{

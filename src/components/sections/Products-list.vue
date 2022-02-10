@@ -27,13 +27,13 @@
       v-for="(element, index) in reviews" :key="index">
         <div class="ms_single-product-text">
         <div>
-          {{element.title}}
+          <span>{{element.title}}</span>
         </div>
         <div>
           <span v-for="stars in element.stelline" :key="stars"><i class="fas fa-star"></i></span>
         </div>
         <div> 
-          by {{element.author}}
+          <span>by {{element.author}}</span>
         </div>
       </div>
       <div class="ms_single-product-img">
@@ -108,6 +108,11 @@ export default {
     .ms_container-products{
         width: 22%;
         margin: 0 auto;
+        margin-bottom: 100px;
+    }
+    h4{
+      text-transform: uppercase;
+      color: $grigioavada;
     }
     .ms_container-products:first-child{
         margin-left: 0;
@@ -130,6 +135,12 @@ export default {
                     width: 100%;
                 }
             }
-        }
+            svg{
+                color: $bluavada;
+            }
+    }
+    span{
+        color: $grigioavada;
+    }
 
 </style>

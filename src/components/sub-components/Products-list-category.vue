@@ -2,24 +2,24 @@
         <div class="ms_single-product">
             <div class="ms_single-product-text">
                 <div>
-                    {{prodotto.modello}} 
+                    <span>{{prodotto.modello}}</span> 
                     <span v-if="prodotto.stelline == null">
                         <span v-if="prodotto.sconto != true">
-                            {{prodotto.prezzo}}
+                            <b>{{prodotto.prezzo}}</b>
                         </span>
                         <span v-else>
-                            <s>{{prodotto.prezzo}}</s> <br>
+                            <s><b>{{prodotto.prezzo}}</b></s> <br>
                             <span v-if="prodotto.stelline != null">
                                 <span v-for="element in prodotto.stelline" :key="element"><i class="fas fa-star"></i></span>
                             </span>
-                            <u>{{prodotto.prezzoscontato}}</u> 
+                            <u><b>{{prodotto.prezzoscontato}}</b></u> 
                         </span>
                     </span>
                 </div>
                 <div v-if="prodotto.stelline != null">
                     <span v-for="element in prodotto.stelline" :key="element"><i class="fas fa-star"></i></span> <br>
-                    <span v-if="prodotto.sconto == true"><s>{{prodotto.prezzo}}</s><u>{{prodotto.prezzoscontato}}</u></span>
-                    <span v-else>{{prodotto.prezzo}}</span>
+                    <span v-if="prodotto.sconto == true"><s><b>{{prodotto.prezzo}}</b></s><u><b>{{prodotto.prezzoscontato}}</b></u></span>
+                    <span v-else><b>{{prodotto.prezzo}}</b></span>
                 </div>
             </div>
             <div class="ms_single-product-img">
@@ -44,7 +44,7 @@ export default {
         .ms_single-product{
             display: flex;
             height: 100px;
-            border-bottom: 1px solid lightgray;
+            border-bottom: 1px solid $grigioavada;
             padding: 10px 0;
             .ms_single-product-text{
                 width: 75%;
@@ -56,12 +56,22 @@ export default {
                     width: 100%;
                 }
             }
+            svg{
+                color: $bluavada;
+            }
+            
         }
     .ms_container-products:first-child{
         margin-left: 0;
     }
     .ms_container-products:last-child{
         margin-right: 0;
+    }
+    span{
+        color: $grigioavada;
+    }
+    b, u, s {
+        color: #8f8f8f;
     }
 
 

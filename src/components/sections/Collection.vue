@@ -8,9 +8,9 @@
         :src="element.src"
         :alt="element.nome">
         <div class="ms_collection-text">
-            <h5>{{element.nome}}</h5>
-            <h6>{{element.subnome}}</h6>
-            <button class="btn btn-primary rounded-pill" type="submit">View More</button>
+            <h1>{{element.nome}}</h1>
+            <h4>{{element.subnome}}</h4>
+            <button type="submit"><b>VIEW MORE</b></button>
         </div>
     </div>
 </div>
@@ -63,6 +63,9 @@ export default {
                 height: 100%;
                 width: 100%;
             }
+            h1{
+                font-size: 3rem;
+            }
             .ms_collection-text{
                 position: absolute;
                 bottom: 20%;
@@ -70,6 +73,14 @@ export default {
                 transform: translate(-50%);
             }
         }
+    }
+    button{
+        border: 2px solid white;
+        margin: 35px 10px;
+        padding: 15px 50px;
+        background: rgba(255,255,255, 0.2);
+        color: white;
+        border-radius: 30px;
     }
 
 

@@ -67,13 +67,18 @@ export default {
       }
       }
     }
+    h6{
+      margin-bottom: 35px;
+      color: $grigioavada;
+    }
 
   .ms_carousel-container{
     position: relative;
+    padding: 100px 0;
     .ms_carousel-buttons{
       position: absolute;
       top: 50%;
-      padding: 10px 6px;
+      padding: 20px 10px;
       background-color: lightgrey;
       color: white;
       font-size: 0.8rem;

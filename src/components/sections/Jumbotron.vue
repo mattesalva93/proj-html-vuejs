@@ -8,8 +8,8 @@
             NEW COLLECTION FROM NEW YORK
         </h3>
         <div>
-            <button class="btn btn-primary rounded-pill" type="submit">VIEW ALL</button>
-            <button class="btn btn-primary rounded-pill" type="submit">LOOKBOOK</button>
+            <button type="submit"><b>VIEW ALL</b></button>
+            <button type="submit"><b>LOOKBOOK</b></button>
         </div>
     </div>
 </div>
@@ -41,6 +41,14 @@ export default {
         text-align: center;
         h1{
             font-size: 7rem;
+        }
+        button{
+            border: 2px solid white;
+            margin: 35px 10px;
+            padding: 15px 50px;
+            background: rgba(255,255,255, 0.2);
+            color: white;
+            border-radius: 30px;
         }
     }
 
