@@ -55,6 +55,7 @@ export default {
     }
     .ms_model-img{
         position: relative;
+
         .ms_model-hover{
             display: none;
             svg{

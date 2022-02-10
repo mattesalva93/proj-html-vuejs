@@ -3,15 +3,28 @@
 <div class="ms_carousel-container ms_container text-center">
     <h2>Best Sellers</h2>
     <h6> Must have products from out top sellers</h6>
-    <div @click="scrollaDestra" class="ms_carousel-buttons rx">
-        <i class="fas fa-chevron-right"></i>
-    </div>
     <div class="ms_model-carousel-container" id="carousel-container-1">
         <div v-for="(element, index) in modelliBestSellers" 
           :key="index" 
           class="ms_carousel-img-container">
           <img :src="element.src" alt="">
+          <div class="ms_model-hover">
+            <div>
+              <p><b>{{element.modello}}</b></p>
+              <span>{{element.tipologia}}</span>
+              <p v-if="element.sconto != true">{{element.prezzo}}</p>
+              <p v-else> <s>{{element.prezzo}}</s> {{element.prezzoscontato}} </p>
+            </div>
+            <div class="d-flex justify-content-around w-100">
+              <div><i class="fas fa-shopping-cart"></i></div>
+              <div><i class="fa-solid fa-list"></i> <span> Details </span></div>
+            </div>
+          </div>
         </div>
+    </div>
+
+    <div @click="scrollaDestra" class="ms_carousel-buttons rx">
+        <i class="fas fa-chevron-right"></i>
     </div>
     <div @click="scrollaSinsitra" class="ms_carousel-buttons lx">
         <i class="fas fa-angle-left" ></i>
@@ -62,10 +75,29 @@ export default {
   }
     .ms_carousel-img-container{
       min-width: 20%;
+      position: relative;
       img{
       width: 100%;
       }
+      .ms_model-hover{
+        display: none;
+        color: white;
       }
+      &:hover .ms_model-hover{
+        position: absolute;
+        top:0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        background-image: linear-gradient($bluavada, $rosaavada);
+        opacity: 0.9;
+        cursor: pointer;
+      }
+    }
     }
   h6{
     margin-bottom: 35px;
@@ -108,4 +140,6 @@ export default {
         background-color: $bordiavada;
     }
   }
+
+
 </style>
