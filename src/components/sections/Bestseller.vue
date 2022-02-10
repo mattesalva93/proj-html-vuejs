@@ -26,8 +26,7 @@
 import products from '../data/avada.js';
 
 export default {
-  components: {
-  },
+
   name:"Bestseller",
   data(){
     return{

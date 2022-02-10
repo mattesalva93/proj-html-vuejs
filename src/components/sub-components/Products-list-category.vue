@@ -41,9 +41,6 @@ export default {
 <style lang="scss" scoped>
 @import '../../assets/style/globals.scss';
 
-    .ms_container-products{
-        width: 22%;
-        margin: 0 auto;
         .ms_single-product{
             display: flex;
             height: 100px;
@@ -60,7 +57,6 @@ export default {
                 }
             }
         }
-    }
     .ms_container-products:first-child{
         margin-left: 0;
     }

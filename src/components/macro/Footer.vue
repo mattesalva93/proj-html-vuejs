@@ -14,8 +14,13 @@
                     <i class="fab fa-youtube"></i>
                 </div>
             </div>
-            <Products-list-category 
-            class="py-5"/>
+            <div class="ms_footer-section py-5">
+                <h4>Top rated</h4>
+                <Products-list-category 
+                v-for="(element, index) in modelliTopRated" 
+                :key="index"
+                :prodotto="element"/>  
+            </div>
             <div class="ms_footer-section ms_footer-blog-links py-5">
                 <h4>recent posts</h4>
                 <p><i class="fas fa-angle-right"></i> Lorem ipsum dolor sit amet</p>
@@ -27,47 +32,15 @@
             </div>
             <div class="ms_footer-section py-5">
                 <h4>Tags</h4>
-                <div class="ms_footer-tags">
-                    Black
+                <div v-for="element in arrayTags" :key="element" class="ms_footer-tags">
+                    {{element}}
                 </div>
-                <div class="ms_footer-tags">
-                    Black
-                </div>
-                <div class="ms_footer-tags">
-                    Black
-                </div>
-                <div class="ms_footer-tags">
-                    Black
-                </div>
-                <div class="ms_footer-tags">
-                    Black
-                </div>
-                <div class="ms_footer-tags">
-                    Black
-                </div>
-                <div class="ms_footer-tags">
-                    Black
-                </div>
-                <div class="ms_footer-tags">
-                    Black
-                </div>
-                <div class="ms_footer-tags">
-                    Black
-                </div>
-                <div class="ms_footer-tags">
-                    Black
-                </div>
-                <div class="ms_footer-tags">
-                    Black
-                </div>
-
             </div>
         </div>
     </div>
 
     <div class="ms_footer-bottom text-center">
         <span> &#169; Copyright 2012-2020 | Avada Theme by Theme Fusion | All Rights Reseverved | Powered by WordPress</span>
-       
     </div>
 </footer>
 </template>
@@ -75,13 +48,30 @@
 <script>
 import FooterTop from '../sections/Footer-top.vue'
 import ProductsListCategory from '../sub-components/Products-list-category.vue'
+import products from '../data/avada.js';
+
 export default {
+    name:"Footer",
     components: {
         FooterTop,
         ProductsListCategory 
+    },
+    data(){
+      return{
+        modelli: products,
+        modelliTopRated: [],
+        arrayTags: ['Lorem', 'Ipsum', 'is', 'simply', 'dummy', 'text', 'of', 'the', 'printing', 'and', 'typesetting', 'industry']
+      }
+    },
+    created(){
+      this.getToprated();
+    },
+    methods:{
+      getToprated(){
+        this.modelliTopRated = this.modelli.filter(element => element.toprated);
+      },
 
     },
-    name:"Footer"
 }
 </script>
 
@@ -92,7 +82,6 @@ export default {
         background-color: lightgreen;
         .ms_footer-section{
             width: 22%;
-            height: 85px;
             margin: 0 auto;
         }
         .ms_footer-section:first-child{

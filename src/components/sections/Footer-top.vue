@@ -3,11 +3,7 @@
         <div class="ms_footer-logos text-center">
             <div class="ms_container">
                 <h5>Brand Logos</h5>
-                <img src="../../assets/img/b_logotype_1.png" alt="">           
-                <img src="../../assets/img/b_logotype_1.png" alt="">
-                <img src="../../assets/img/b_logotype_1.png" alt="">
-                <img src="../../assets/img/b_logotype_1.png" alt="">
-                <img src="../../assets/img/b_logotype_1.png" alt="">
+                <img v-for="(element, index) in arrayLoghi" :key="index" :src="element.src" alt="">           
             </div>
         </div>
         <div class="ms_newsletter">
@@ -29,7 +25,28 @@
 
 <script>
 export default {
-    name:"Footer"
+    name:"Footer",
+    data(){
+        return{
+            arrayLoghi:[
+                {
+                    src: require("../../assets/img/b_logotype_1.png"),
+                },
+                {
+                    src: require("../../assets/img/b_logotype_2.png"),
+                },
+                {
+                    src: require("../../assets/img/b_logotype_3.png"),
+                },
+                {
+                    src: require("../../assets/img/b_logotype_4.png"),
+                },
+                {
+                    src: require("../../assets/img/b_logotype_5.png"),
+                },
+            ],
+        }
+    }
 }
 </script>
 
