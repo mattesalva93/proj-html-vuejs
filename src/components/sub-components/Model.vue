@@ -33,6 +33,10 @@ export default {
 
     .ms_model-box{
         width: 25%;
+        img{
+            width: 100%;
+            height: 100%;
+        }
         .ms_model-text{
             text-align: left;
         h6{

@@ -81,6 +81,10 @@ export default {
         background: rgba(255,255,255, 0.2);
         color: white;
         border-radius: 30px;
+        transition: all 300ms ease-in-out;
+        &:hover{
+            background: rgba(255,255,255, 0);
+        }
     }
 
 

@@ -79,6 +79,8 @@ export default {
     .ms_carousel-img-container{
       min-width: 20%;
       position: relative;
+      
+      
       img{
       width: 100%;
       }
