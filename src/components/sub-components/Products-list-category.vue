@@ -1,44 +1,40 @@
 <template>
-    <div class="ms_container-products">
-        <h4>Featured</h4>
         <div class="ms_single-product">
             <div class="ms_single-product-text">
-                <span>Black Jacket $125</span> <br>
-                <span>stelline</span> <br>
-                <span>eventuale sconto </span>
+                <div>
+                    {{prodotto.modello}} 
+                    <span v-if="prodotto.stelline == null">
+                        <span v-if="prodotto.sconto != true">
+                            {{prodotto.prezzo}}
+                        </span>
+                        <span v-else>
+                            <s>{{prodotto.prezzo}}</s> <br>
+                            <span v-if="prodotto.stelline != null">
+                                <span v-for="element in prodotto.stelline" :key="element"><i class="fas fa-star"></i></span>
+                            </span>
+                            <u>{{prodotto.prezzoscontato}}</u> 
+                        </span>
+                    </span>
+                </div>
+                <div v-if="prodotto.stelline != null">
+                    <span v-for="element in prodotto.stelline" :key="element"><i class="fas fa-star"></i></span> <br>
+                    <span v-if="prodotto.sconto == true"><s>{{prodotto.prezzo}}</s><u>{{prodotto.prezzoscontato}}</u></span>
+                    <span v-else>{{prodotto.prezzo}}</span>
+                </div>
             </div>
             <div class="ms_single-product-img">
-                <img src="../../assets/img/black_leather_jacket-120x156.jpg" alt="">
+                <img :src="prodotto.src" alt="">
             </div>
         </div>
-        <div class="ms_single-product">
-            <div class="ms_single-product-text">
-                <span>Black Jacket $125</span> <br>
-                <span>stelline</span> <br>
-                <span>eventuale sconto </span>
-            </div>
-            <div class="ms_single-product-img">
-                <img src="../../assets/img/black_leather_jacket-120x156.jpg" alt="">
-            </div>
-        </div>
-        <div class="ms_single-product">
-            <div class="ms_single-product-text">
-                <span>Black Jacket $125</span> <br>
-                <span>stelline</span> <br>
-                <span>eventuale sconto </span>
-            </div>
-            <div class="ms_single-product-img">
-                <img src="../../assets/img/black_leather_jacket-120x156.jpg" alt="">
-            </div>
-        </div>
-    </div>
 </template>
 
 <script>
 
 export default {
     name:"Productslistcategory",
-
+    props:{
+        'prodotto': Object,
+    }
 }
 </script>
 

@@ -1,13 +1,10 @@
 <template>
-    
     <div class="ms_article-box">
         <img :src="articolo.src" alt="">
         <h6>{{articolo.title}}</h6>
         <span>{{articolo.date}}</span> <span>| {{articolo.comments}}</span>
         <p>{{articolo.text}}</p>
     </div>
-        
-    
 </template>
 
 <script>
