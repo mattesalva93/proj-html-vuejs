@@ -8,7 +8,11 @@ const products = [
         sconto: true,
         target: "men",
         featured: true,
-        bestseller: true
+        bestseller: true,
+        inevidenza: true,
+        onsale: true,
+        toprated: true,
+        stelline: 5,
     },
     {
         src:  require("../../assets/img/black_leather_suit-200x260.jpg"),
@@ -29,7 +33,8 @@ const products = [
         prezzoscontato: "",
         sconto: false,
         target: "men",
-        featured: true
+        featured: true,
+        
     },
     {
         src:  require("../../assets/img/modern_black_leather_suit-200x260.jpg"),
@@ -49,7 +54,8 @@ const products = [
         prezzoscontato: "60",
         sconto: true,
         target: "men",
-        featured: false
+        featured: false,
+        onsale: true,
     },
     {
         src:  require("../../assets/img/black_leather_jacket-200x260.jpg"),
@@ -59,6 +65,7 @@ const products = [
         prezzoscontato: "",
         sconto: false,
         target: "women",
+        inevidenza: true,
         featured: true,
         bestseller: true
 
@@ -71,6 +78,7 @@ const products = [
         prezzoscontato: "",
         sconto: false,
         target: "women",
+        inevidenza: true,
         featured: true,
         bestseller: true
     },
@@ -94,7 +102,9 @@ const products = [
         sconto: false,
         target: "women",
         featured: true,
-        bestseller: true
+        bestseller: true,
+        toprated: true,
+        stelline: 5
     },
     {
         src:  require("../../assets/img/brown_dress_shoes-200x260.jpg"),
@@ -124,7 +134,9 @@ const products = [
         prezzoscontato: "",
         sconto: false,
         target: "accessories",
-        featured: true
+        featured: true,
+        toprated: true,
+        stelline: 5,
     },
     {
         src:  require("../../assets/img/modern_leather_boots-200x260.jpg"),
@@ -134,7 +146,8 @@ const products = [
         prezzoscontato: "30",
         sconto: true,
         target: "accessories",
-        featured: true
+        featured: true,
+        onsale: true,
     },
 
 ];
